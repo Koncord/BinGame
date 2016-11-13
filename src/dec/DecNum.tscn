@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://dec/Theme.tres" type="Theme" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Button\n\t\nfunc _pressed():\n\tset_pressed(!is_pressed()) #prevent pressing"
+
+[node name="DecNum" type="Button"]
+
+rect/min_size = Vector2( 64, 64 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 64.0
+margin/bottom = 64.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -3.0
+margin/top = 18.0
+margin/right = 67.0
+margin/bottom = 51.0
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
